@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 06 2022 г., 17:08
+-- Время создания: Мар 06 2022 г., 18:02
 -- Версия сервера: 5.7.33-log
 -- Версия PHP: 7.1.33
 
@@ -60,7 +60,8 @@ CREATE TABLE `user` (
   `lastName` varchar(255) NOT NULL COMMENT 'Фамилия',
   `md5Password` varchar(255) NOT NULL COMMENT 'Пароль',
   `isAdmin` int(10) UNSIGNED DEFAULT '0' COMMENT 'Является ли пользователь администратором',
-  `phoneNumber` varchar(11) NOT NULL COMMENT 'Номер телефона (логин)'
+  `phoneNumber` varchar(11) NOT NULL COMMENT 'Номер телефона (логин)',
+  `email` varchar(255) NOT NULL COMMENT 'Почта'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
