@@ -12,9 +12,9 @@
         $stmt->bindValue(':email', $_GET['email']);
 
         $stmt->execute();
-        echo ("Пользователь успешно добавлен");
+        $_SESSION['msg'] = "Пользователь успешно добавлен";
     } catch (PDOexception $error) {
-        echo ("Ошибка добавления пользователя: " . $error->getMessage());
+        $_SESSION['msg'] = "Ошибка добавления пользователя: " . $error->getMessage();
     }
     // Перенаправление на главную страницу приложения
     header('Location: http://webprogramming');

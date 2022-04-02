@@ -5,10 +5,10 @@
         $stmt = $conn->prepare($sql);
         $stmt->bindValue(':id', $_GET['id']);
         $stmt->execute();
-        echo("Пользователь усепшно удалён");
+        $_SESSION['msg'] = "Пользователь усепшно удалён";
     }
     catch (PDOException $error){
-        echo ("Ошибка удаления пользователя: ".$error->getMessage());
+        $_SESSION['msg'] = "Ошибка удаления пользователя: ".$error->getMessage();
     }
     header('Location: http://webprogramming');
     exit( );

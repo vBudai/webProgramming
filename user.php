@@ -1,6 +1,5 @@
 <h1>Пользователи:</h1>
 <table border=''1'>
-
 <?php
     $result = $conn->query("SELECT * FROM user");
 
@@ -19,11 +18,11 @@
 
 <h2>Добавление пользователя:</h2>
 <form method="get" action="addUser.php">
-    <input placeholder="Имя" type="text" name="firstName">
-    <input placeholder="Фамилия" type="text" name="lastName">
-    <input placeholder="Пароль" type="password" name="md5Password">
-    <input placeholder="Номер телефона" type="text" name="phoneNumber">
-    <input placeholder="Почта" type="text" name="email">
+    <input placeholder="Имя" type="text" name="firstName"><br/>
+    <input placeholder="Фамилия" type="text" name="lastName"><br/>
+    <input placeholder="Пароль" type="password" name="md5Password"><br/>
+    <input placeholder="Номер телефона" type="text" name="phoneNumber"><br/>
+    <input placeholder="Почта" type="text" name="email"><br/>
     <input type="submit" value="Добавить">
 </form>
 
