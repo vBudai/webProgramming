@@ -1,5 +1,4 @@
 <?php
-
     if (isset($_POST["login"]) and $_POST["login"]!='')
     {
         try {
@@ -20,7 +19,6 @@
                 $_SESSION['firstName'] = $row['firstName'];
                 $_SESSION['lastName'] = $row['lastName'];
                 $_SESSION['id'] = $row['id'];
-                $msg =  "Вход выполнен";
             }
         }
         else $msg = "Неправильный логин!";

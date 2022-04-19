@@ -1,5 +1,5 @@
 <?php
-    require "dbconnect.php";
+    require __DIR__."./../data/dbconnect.php";
     try {
         $sql = 'INSERT INTO user(firstName, lastName, md5Password, phoneNumber, email) 
                           VALUES(:firstName, :lastName, :md5Password, :phoneNumber, :email)';
@@ -7,7 +7,7 @@
 
         $stmt->bindValue(':firstName', $_GET['firstName']);
         $stmt->bindValue(':lastName', $_GET['lastName']);
-        $stmt->bindValue(':md5Password', $_GET['md5Password']);
+        $stmt->bindValue(':md5Password', MD5($_GET['md5Password']));
         $stmt->bindValue(':phoneNumber', $_GET['phoneNumber']);
         $stmt->bindValue(':email', $_GET['email']);
 

@@ -1,5 +1,5 @@
 <?php
-    require "dbconnect.php";
+    require __DIR__."./../data/dbconnect.php";
     try{
         $sql = 'DELETE FROM user WHERE id=:id';
         $stmt = $conn->prepare($sql);
