@@ -1,5 +1,5 @@
 <?php
-    require __DIR__."./../menu.php";
+    require __DIR__."./../header.php";
     require __DIR__."./../data/dbconnect.php";
 
     try {
@@ -21,5 +21,5 @@
         $_SESSION['msg'] = "Ошибка написания сообщения: " . $error->getMessage();
     }
     // Перенаправление обратно
-    header("Location: http://webprogramming/ad/ad.php?id=$id_ad");
+    header("Location: http://webprogramming/ad.php?id=$id_ad");
     exit();
